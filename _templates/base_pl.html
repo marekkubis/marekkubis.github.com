@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Marek Kubis - Strona domowa</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+	<div id="wrapper">
+		<div id="menu">
+			<div class="cattop">
+				<div id="name">Marek Kubis</div>
+
+				<div id="title">Strona domowa (<a href="{{ name|replace('_pl.html', '.html') }}">English</a>)</div>
+			</div>
+
+			<div class="category">
+				<div class="cathead">Kontakt</div>
+				<div class="catbody">
+					<table>
+                                            <tr><td>e-mail:</td><td class="tvalue"><a href="mailto:marek.kubis@gmail.com">marek.kubis@gmail.com</a></td></tr>
+
+                                            <tr><td>twitter:</td><td class="tvalue"><a href="http://twitter.com/marekkubis">@marekkubis</a></td></tr>
+
+					</table>
+				</div>
+			</div>
+
+			<div class="category">
+				<div class="cathead">Kategorie</div>
+				<div class="catbody">
+					<ul>
+						<li><a href="index_pl.html">Publikacje</a></li>
+						<li><a href="projects_pl.html">Projekty</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="category">
+				<div class="cathead">Linki</div>
+				<div class="catbody">
+					<ul>
+						<li><a href="http://www.staff.amu.edu.pl/%7Ezlisi/">Zakład Lingwistyki Informatycznej i Sztucznej Inteligencji</a></li>
+						<li><a href="http://www.wmi.amu.edu.pl/">Wydział Matematyki i Informatyki</a></li>
+						<li><a href="http://www.amu.edu.pl/">Uniwersytet im. A. Mickiewicza</a></li>
+						<li><a href="http://ltc.amu.edu.pl/">Language & Technology Conference</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+		<div id=content>
+		        {% block content %} {% endblock %}
+		</div>
+	</div>	
+
+	</body>
+</html>

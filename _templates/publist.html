@@ -1,0 +1,59 @@
+{% for publication in publications %}
+<div class="contentitem">
+	<div class="contenttitle">{{ publication.fields.title.strip('{}') }}</div>
+
+	<div class="contentsubtitle">{{ publication.fields.author|nameformat }}</div>
+
+	<div class="contentbody">
+		<p>
+                        {% if publication.fields.booktitle is defined %}
+                                [in:]
+                                {% if publication.fields.editor is defined %}
+                                        {{ publication.fields.editor|nameformat }} 
+                                        {% if ' and ' in publication.fields.editor %}
+                                                (eds.):
+                                        {% else %}
+                                                (ed.):
+                                        {% endif %}
+                                {% endif %}
+                                <i>{{ publication.fields.booktitle }}</i>,
+                        {% endif %}
+                        {% if publication.fields.series is defined %}
+                                {{ publication.fields.series }},
+                        {% endif %}
+                        {% if publication.fields.volume is defined %}
+                                vol. {{ publication.fields.volume }},
+                        {% endif %}
+                        {% if publication.fields.pages is defined %}
+                                pp. {{ publication.fields.pages.replace('--', '-') }},
+                        {% endif %}
+                        {% if publication.fields.publisher is defined %}
+                                {{ publication.fields.publisher }},
+                        {% endif %} 
+                        {% if publication.fields.address is defined %}
+                                {{ publication.fields.address }},
+                        {% endif %} 
+                        {% if publication.fields.year is defined %}
+                                {{ publication.fields.year }}
+                        {% endif %}
+                        {% if publication.fields.isbn is defined %}
+                                ISBN {{ publication.fields.isbn }}
+                        {% endif %}
+                        {% if publication.fields.issn is defined %}
+                                ISSN {{ publication.fields.issn }}
+                        {% endif %}
+                        {% if publication.fields.note is defined %}
+                                ({{ publication.fields.note }})
+                        {% endif %}
+		</p>
+	</div>
+
+	<div class="contentactions">
+        <a href="publications.bib">bibtex</a>
+        {% if publication.fields.url is defined %}
+                |
+
+                <a href="{{ publication.fields.url }}">more</a></div>
+        {% endif %}
+</div>
+{% endfor %}
