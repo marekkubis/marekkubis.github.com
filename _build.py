@@ -10,10 +10,10 @@ def nameformat(names):
 parser = bibtex.Parser()
 publications = parser.parse_file('publications.bib').entries.values()
 
-env = Environment(loader=FileSystemLoader(['templates', 'content']))
+env = Environment(loader=FileSystemLoader(['_templates', '_content']))
 env.filters['nameformat'] = nameformat
 
-for path, dirnames, filenames in os.walk('content'):
+for path, dirnames, filenames in os.walk('_content'):
     for filename in filenames:
         if filename.endswith('html'):
             with open(filename, 'w') as file:
