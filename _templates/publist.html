@@ -53,7 +53,8 @@
         {% if publication.fields.url is defined %}
                 |
 
-                <a href="{{ publication.fields.url }}">more</a></div>
-        {% endif %}
+                <a href="{{ publication.fields.url }}">more</a>
+	{% endif %}
+	</div>
 </div>
 {% endfor %}
