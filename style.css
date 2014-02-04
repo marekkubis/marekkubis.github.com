@@ -18,7 +18,7 @@ body {
 }
 
 #menu {
-	width: 300px;
+	width: 310px;
 	float: left;
 	padding: 0;
 }
@@ -39,7 +39,7 @@ body {
 }
 
 #name {
-	font-size: 30pt;
+	font-size: 22pt;
 	color: #575757;
 }
 

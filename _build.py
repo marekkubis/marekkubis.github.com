@@ -8,7 +8,6 @@ from pybtex.database.input import bibtex
 key_pattern = re.compile('([A-Z])[a-z]*([0-9]+.*)')
 entry_start_pattern = re.compile('@[A-Za-z]+{(.*),')
 
-
 def key2bibfile(key):
     matcher = key_pattern.match(key)
     return matcher.group(1).lower() + matcher.group(2) + '.bib'
