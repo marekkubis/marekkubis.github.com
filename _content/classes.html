@@ -1,40 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 
+{% for subject in data.classes %}
 <div class="contentitem">
 	<div class="contenttitle">
-		Artificial Intelligence
-	</div>
-
-
-	<div class="contentbody">
-		<p>
-			Monday, 15:30 - 17:00, room A1-16,17
-		</p>
-
-		<p>
-			Monday, 17:15 - 18:45, room A1-16,17
-		</p>
-	</div>
-
-	<div class="contentactions"><a href="https://eduwiki.wmi.amu.edu.pl/mkubis/DSZI-2016">More (in Polish)</a></div>
-</div>
-
-<div class="contentitem">
-	<div class="contenttitle">
-		Programming
+        {{subject.name}}
 	</div>
 
 	<div class="contentbody">
-		<p>
-			Tuesday, 16:45 - 18:15, room 67
-		</p>
-		<p>
-			Friday, 13:15 - 14:45, room 67
-		</p>
+        {% for hour in subject.hours %}
+            <p> {{hour}} </p>
+        {% endfor %}
 	</div>
 
-	<div class="contentactions"><a href="kogprog.pdf">More (in Polish)</a></div>
+    <div class="contentactions"><a href="{{subject.more}}">More (in Polish)</a></div>
 </div>
+{% endfor %}
 
 {% endblock %}

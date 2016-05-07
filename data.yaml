@@ -1,0 +1,26 @@
+---
+hours:
+    - Tuesday, 12:00 - 13:00
+    - Monday, 18:45 - 19:45
+classes:
+    - name: Artificial Intelligence
+      hours:
+        - Monday, 15:30 - 17:00, room A1-16,17
+        - Monday, 17:15 - 18:45, room A1-16,17
+      more: https://eduwiki.wmi.amu.edu.pl/mkubis/DSZI-2016
+    - name: Programming
+      hours:
+        - Tuesday, 16:45 - 18:15, room 67
+        - Friday, 13:15 - 14:45, room 67
+      more: kogprog.pdf
+en2pl:
+    Monday: poniedziałek 
+    Tuesday: wtorek 
+    Wednesday: środa
+    Thursday: czwartek
+    Friday: piątek
+    Saturday: sobota
+    Sunday: niedziela
+    Artificial Intelligence: Sztuczna Inteligencja
+    Programming: Programowanie
+    room: sala

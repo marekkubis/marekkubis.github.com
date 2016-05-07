@@ -1,42 +1,20 @@
 {% extends "base_pl.html" %}
 {% block content %}
 
+{% for subject in data.classes %}
 <div class="contentitem">
 	<div class="contenttitle">
-		Sztuczna Inteligencja
+        {{subject.name|pl}}
 	</div>
 
 	<div class="contentbody">
-		<p>
-			poniedziałek, 15:30 - 17:00, sala A1-16,17
-		</p>
-
-		<p>
-			poniedziałek, 17:15 - 18:45, sala A1-16,17
-		</p>
+        {% for hour in subject.hours %}
+            <p> {{hour|pl}} </p>
+        {% endfor %}
 	</div>
 
-
-	<div class="contentactions"><a href="https://eduwiki.wmi.amu.edu.pl/mkubis/DSZI-2016">Szczegóły</a></div>
+    <div class="contentactions"><a href="{{subject.more}}">Szczegóły</a></div>
 </div>
-
-<div class="contentitem">
-	<div class="contenttitle">
-		Programowanie
-	</div>
-
-	<div class="contentbody">
-		<p>
-			wtorek, 16:45 - 18:15, sala 67
-		</p>
-		<p>
-			piątek, 13:15 - 14:45, sala 67
-		</p>
-	</div>
-
-	<div class="contentactions"><a href="kogprog.pdf">Szczegóły</a></div>
-</div>
-
-
+{% endfor %}
 
 {% endblock %}
