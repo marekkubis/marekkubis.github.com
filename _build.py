@@ -32,7 +32,8 @@ with open('publications.bib') as pubfile:
 
             curr_file = open(bibfilename, 'w')
 
-        curr_file.write(line)
+        if not line.lstrip().startswith('note'):
+            curr_file.write(line)
 
 if curr_file != None:
     curr_file.close()

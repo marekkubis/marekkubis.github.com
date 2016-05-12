@@ -6,6 +6,9 @@
 
 	<div class="contentbody">
 		<p>
+			{% if publication.fields.journal %}
+				<i>{{ publication.fields.journal }}</i>
+			{% endif %}
                         {% if publication.fields.booktitle is defined %}
                                 [in:]
                                 {% if publication.fields.editor is defined %}
@@ -22,7 +25,12 @@
                                 {{ publication.fields.series }},
                         {% endif %}
                         {% if publication.fields.volume is defined %}
-                                vol. {{ publication.fields.volume }},
+                                vol. 
+                        	{% if publication.fields.number is defined %}
+                                	{{ publication.fields.volume }}({{ publication.fields.number }}),
+                        	{% else %}
+					{{ publication.fields.volume }},
+                        	{% endif %}
                         {% endif %}
                         {% if publication.fields.pages is defined %}
                                 pp. {{ publication.fields.pages.replace('--', '-') }},
