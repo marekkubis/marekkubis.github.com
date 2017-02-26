@@ -3,17 +3,11 @@ hours:
     - Monday, 17:00 - 18:00
     - Tuesday, 12:00 - 13:00
 classes:
-    - name: Human-Computer Interaction
+    - name: Artificial Intelligence
       hours:
         - Monday, 15:30 - 17:00, room A1-16,17
-        - Thursday, 10:00 - 11:30, room A0-1
-      more: https://eduwiki.wmi.amu.edu.pl/mkubis/DKCK-2016
-    - name: Server Applications Technologies
-      hours:
-        - Monday, 13:45 - 15:15, room A1-24,25
-        - Tuesday, 13:45 - 15:15, room A1-14,15
-        - Tuesday, 15:30 - 17:00, room A1-14,15
-      more: https://eduwiki.wmi.amu.edu.pl/mkubis/DTAS-2016
+        - Wednesday, 15:30 - 17:00, room A0-1
+      more: https://eduwiki.wmi.amu.edu.pl/mkubis/DSZI-2017
 en2pl:
     Monday: poniedziałek 
     Tuesday: wtorek 
