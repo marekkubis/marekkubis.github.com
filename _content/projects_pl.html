@@ -1,48 +1,25 @@
 {% extends "base_pl.html" %}
 {% block content %}
-<div class="contentitem">
-	<div class="contenttitle">
-		Wsparcie stypendialne dla doktorantów na kierunkach uznanych za strategiczne z punktu widzenia rozwoju Wielkopolski
-	</div>
 
-	<div class="contentsubtitle">Stypendysta, 2011</div>
-
-	<div class="contentbody">
-		<p>
-Projekt realizowany w ramach Poddziałania 8.2.2 Programu Operacyjnego Kapitał Ludzki, współfinansowanego przez Unię Europejską w ramach Europejskiego Funduszu Społecznego.
-		</p>
-	</div>
-
-	<div class="contentactions"><a href="http://efs.wup.poznan.pl/att/stypendia/Marek_Kubis.pdf">Więcej</a></div>
-</div>
+{% for project in data.projects %}
 
 <div class="contentitem">
 	<div class="contenttitle">
-		Ontologia typu wordnet do zarządzania wiedzą w systemie obsługi ruchu turystycznego w mieście Poznań – CITTA (CITTA Ontology)
+	{{project.namepl}}
 	</div>
 
-	<div class="contentsubtitle">Wykonawca, 2010</div>
+	<div class="contentsubtitle">{{project.role|pl}}, {{project.year}}</div>
 
 	<div class="contentbody">
 		<p>
-Projekt realizowany w ramach programu "Akademicki Poznań" (grant Miasta Poznań nr RoM. V/3420-52/10 Fn 2625/10) pod kierownictwem <a href="http://www.staff.amu.edu.pl/~vetulani/">prof. dr hab. Z. Vetulaniego</a>.
-		</p>
-	</div>
-</div>
-
-<div class="contentitem">
-	<div class="contenttitle">
-		Technologie przetwarzania tekstu polskiego zorientowane na potrzeby bezpieczeństwa publicznego
-	</div>
-
-	<div class="contentsubtitle">Wykonawca, 2008-2010</div>
-
-	<div class="contentbody">
-		<p>
-					Projekt realizowany w ramach Polskiej Platformy Bezpieczeństwa Wewnętrznego  (grant MNiSzW nr R0002802) pod kierownictwem <a href="http://www.staff.amu.edu.pl/~vetulani/">prof. dr hab. Z. Vetulaniego</a>.
+		{{project.descriptionpl}}
 		</p>
 	</div>
 
-	<div class="contentactions"><a href="http://www.ppbw.pl/ppbw/4.html">Więcej</a></div>
+	{% if project.more is defined %}
+	<div class="contentactions"><a href="{{project.more}}">More</a></div>
+	{% endif %}
 </div>
+{% endfor %}
+
 {% endblock %}

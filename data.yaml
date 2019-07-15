@@ -9,6 +9,34 @@ classes:
         - Monday, 15:30 - 17:00, room D-1
         - Monday, 17:15 - 18:45, room D-1
       more: https://eduwiki.wmi.amu.edu.pl/mkubis/DSZI-2019B
+projects:
+    - name: Development of the interdisciplinary master program on Computational Linguistics at Central Asian universities
+      description: Erasmus+ CBHE action no. 585845-EPP-1-2017-1-ES-EPPKA2-CBHE-JP
+      role: Project member
+      year: 2017-2020
+      more: http://erasmus-class.eu
+      namepl: Development of the interdisciplinary master program on Computational Linguistics at Central Asian universities
+      descriptionpl: Erasmus+ CBHE action no. 585845-EPP-1-2017-1-ES-EPPKA2-CBHE-JP
+    - name: Scholarship support for Ph.D. students specializing in majors strategic for Wielkopolska’s development
+      description: Project within Sub-measure 8.2.2 Human Capital Operational Programme, co-financed by European Union under the European Social Fund.
+      role: Scholarship holder
+      year: 2011
+      more: http://efs.wup.poznan.pl/att/stypendia/Marek_Kubis.pdf
+      namepl: Wsparcie stypendialne dla doktorantów na kierunkach uznanych za strategiczne z punktu widzenia rozwoju Wielkopolski
+      descriptionpl: Projekt realizowany w ramach Poddziałania 8.2.2 Programu Operacyjnego Kapitał Ludzki, współfinansowanego przez Unię Europejską w ramach Europejskiego Funduszu Społecznego.
+    - name: Ontologia typu wordnet do zarządzania wiedzą w systemie obsługi ruchu turystycznego w mieście Poznań – CITTA (CITTA Ontology)
+      role: Investigator
+      description: Project within the program "Akademicki Poznań", financed by the City of Poznań grant RoM. V/3420-52/10 Fn 2625/10.
+      year: 2010
+      namepl: Ontologia typu wordnet do zarządzania wiedzą w systemie obsługi ruchu turystycznego w mieście Poznań – CITTA (CITTA Ontology)
+      descriptionpl: Projekt realizowany w ramach programu "Akademicki Poznań" (grant Miasta Poznań nr RoM. V/3420-52/10 Fn 2625/10).
+    - name: Text processing technologies for Polish in application for public security purposes
+      description: Project of the Polish Platform for Homeland Security, financed by the Polish Government grant R0002802.
+      role: Investigator
+      year: 2008-2010
+      more: http://www.ppbw.pl/ppbw/en-4.html
+      namepl: Technologie przetwarzania tekstu polskiego zorientowane na potrzeby bezpieczeństwa publicznego
+      descriptionpl: Projekt realizowany w ramach Polskiej Platformy Bezpieczeństwa Wewnętrznego  (grant MNiSzW nr R0002802).
 en2pl:
     Monday: poniedziałek 
     Tuesday: wtorek 
@@ -23,3 +51,6 @@ en2pl:
     Server Applications Technologies: Technologie Aplikacji Serwerowych
     Human-Computer Interaction: Komunikacja Człowiek-Komputer
     room: sala
+    Investigator: Wykonawca
+    Project member: Wykonawca
+    Scholarship holder: Stypendysta
