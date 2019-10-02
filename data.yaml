@@ -1,13 +1,18 @@
 ---
 hours:
     - Tuesday, 12:00 - 13:00
-    - Tuesday, 13:00 - 14:00
+    - Tuesday, 18:45 - 19:45
 classes:
     - name: Server Applications Technologies
       hours:
         - Tuesday, 15:30 - 17:00, room A1-14,15
         - Wednesday, 15:30 - 17:00, room D-2
       more: https://eduwiki.wmi.amu.edu.pl/mkubis/DTAS-2019
+    - name: Object Oriented Analysis and Design
+      hours:
+        - Tuesday, 13:45 - 15:15, room A0-1
+        - Tuesday, 17:15 - 18:45, room A1-16,17
+      more: https://eduwiki.wmi.amu.edu.pl/mkubis/DAPO-2019
 projects:
     - name: Development of the interdisciplinary master program on Computational Linguistics at Central Asian universities
       description: Erasmus+ CBHE action no. 585845-EPP-1-2017-1-ES-EPPKA2-CBHE-JP.
@@ -49,6 +54,7 @@ en2pl:
     Operating Systems: Systemy Operacyjne
     Server Applications Technologies: Technologie Aplikacji Serwerowych
     Human-Computer Interaction: Komunikacja Człowiek-Komputer
+    Object Oriented Analysis and Design: Analiza i projektowanie obiektowe
     room: sala
     Investigator: Wykonawca
     Project member: Wykonawca
