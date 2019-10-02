@@ -3,12 +3,11 @@ hours:
     - Tuesday, 12:00 - 13:00
     - Tuesday, 13:00 - 14:00
 classes:
-    - name: Artificial Intelligence
+    - name: Server Applications Technologies
       hours:
-        - Monday, 11:45 - 13:15, room A0-1
-        - Monday, 15:30 - 17:00, room D-1
-        - Monday, 17:15 - 18:45, room D-1
-      more: https://eduwiki.wmi.amu.edu.pl/mkubis/DSZI-2019B
+        - Tuesday, 15:30 - 17:00, room A1-14,15
+        - Wednesday, 15:30 - 17:00, room D-2
+      more: https://eduwiki.wmi.amu.edu.pl/mkubis/DTAS-2019
 projects:
     - name: Development of the interdisciplinary master program on Computational Linguistics at Central Asian universities
       description: Erasmus+ CBHE action no. 585845-EPP-1-2017-1-ES-EPPKA2-CBHE-JP.
