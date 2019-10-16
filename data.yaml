@@ -5,7 +5,6 @@ hours:
 classes:
     - name: Server Applications Technologies
       hours:
-        - Tuesday, 15:30 - 17:00, room A1-14,15
         - Wednesday, 15:30 - 17:00, room D-2
       more: https://eduwiki.wmi.amu.edu.pl/mkubis/DTAS-2019
     - name: Object Oriented Analysis and Design
