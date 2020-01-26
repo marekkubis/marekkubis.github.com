@@ -2,7 +2,7 @@
 <div class="contentitem">
 	<div class="contenttitle">{{ publication.fields.title.strip('{}') }}</div>
 
-	<div class="contentsubtitle">{{ publication.fields.author|nameformat }}</div>
+	<div class="contentsubtitle">{{ publication.persons.author|nameformat }}</div>
 
 	<div class="contentbody">
 		<p>
@@ -11,9 +11,9 @@
 			{% endif %}
                         {% if publication.fields.booktitle is defined %}
                                 [in:]
-                                {% if publication.fields.editor is defined %}
-                                        {{ publication.fields.editor|nameformat }} 
-                                        {% if ' and ' in publication.fields.editor %}
+                                {% if publication.persons.editor is defined %}
+                                        {{ publication.persons.editor|nameformat }}
+                                        {% if publication.persons.editor | length > 1 %}
                                                 (eds.):
                                         {% else %}
                                                 (ed.):
@@ -25,7 +25,7 @@
                                 {{ publication.fields.series }},
                         {% endif %}
                         {% if publication.fields.volume is defined %}
-                                vol. 
+                                vol.
                         	{% if publication.fields.number is defined %}
                                 	{{ publication.fields.volume }}({{ publication.fields.number }}),
                         	{% else %}
@@ -37,10 +37,10 @@
                         {% endif %}
                         {% if publication.fields.publisher is defined %}
                                 {{ publication.fields.publisher }},
-                        {% endif %} 
+                        {% endif %}
                         {% if publication.fields.address is defined %}
                                 {{ publication.fields.address }},
-                        {% endif %} 
+                        {% endif %}
                         {% if publication.fields.year is defined %}
                                 {{ publication.fields.year }}
                         {% endif %}

@@ -15,8 +15,9 @@ def key2bibfile(key):
     return matcher.group(1).lower() + matcher.group(2) + '.bib'
 
 
-def nameformat(names):
-    return names.replace(' and ', ', ')
+def nameformat(persons):
+    return ', '.join(str(person) for person in persons)
+
 
 curr_file = None
 
@@ -24,10 +25,10 @@ with open('publications.bib') as pubfile:
     for line in pubfile:
         matcher = entry_start_pattern.search(line)
 
-        if matcher != None:
+        if matcher is not None:
             bibfilename = key2bibfile(matcher.group(1))
 
-            if curr_file != None:
+            if curr_file is not None:
                 curr_file.close()
 
             curr_file = open(bibfilename, 'w')
@@ -35,14 +36,14 @@ with open('publications.bib') as pubfile:
         if not line.lstrip().startswith('note'):
             curr_file.write(line)
 
-if curr_file != None:
+if curr_file is not None:
     curr_file.close()
 
 parser = bibtex.Parser()
 publications = parser.parse_file('publications.bib').entries.values()
 
 with open('data.yaml') as file:
-    data = yaml.load(file)
+    data = yaml.load(file, Loader=yaml.FullLoader)
 
 
 def plword(word):
@@ -61,6 +62,4 @@ for path, dirnames, filenames in os.walk('_content'):
         if filename.endswith('html'):
             with open(filename, 'w') as file:
                 template = env.get_template(filename)
-                file.write(template
-                           .render(name=filename, data=data, publications=publications)
-                           .encode('utf-8'))
+                file.write(template.render(name=filename, data=data, publications=publications))
