@@ -5,13 +5,13 @@ hours:
 classes:
     - name: Artificial Intelligence (en)
       hours:
-        - Monday, 11:45 - 13:15, room A0-1
+        - Monday, 11:45 - 13:15, room D-3
       more: https://eduwiki.wmi.amu.edu.pl/mkubis/AI-2020
     - name: Artificial Intelligence (pl)
       hours:
         - Monday, 15:30 - 17:00, room D-3
         - Wednesday, 10:00 - 11:30, room A0-1
-        - Wednesday, 11:45 - 13:15, room A0-1
+        - Wednesday, 11:45 - 13:15, room D-1
       more: https://eduwiki.wmi.amu.edu.pl/mkubis/DSZI-2020
 projects:
     - name: Development of the interdisciplinary master program on Computational Linguistics at Central Asian universities
