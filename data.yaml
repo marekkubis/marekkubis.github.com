@@ -1,18 +1,12 @@
 ---
 hours:
-    - Monday, 17:00 - 18:00
     - Tuesday, 12:00 - 13:00
+    - Thursday, 12:00 - 13:00
 classes:
-    - name: Artificial Intelligence (en)
+    - name: Object Oriented Analysis and Design
       hours:
-        - Monday, 11:45 - 13:15, room D-3
-      more: https://eduwiki.wmi.amu.edu.pl/mkubis/AI-2020
-    - name: Artificial Intelligence (pl)
-      hours:
-        - Monday, 15:30 - 17:00, room D-3
-        - Wednesday, 10:00 - 11:30, room A0-1
-        - Wednesday, 11:45 - 13:15, room D-1
-      more: https://eduwiki.wmi.amu.edu.pl/mkubis/DSZI-2020
+        - Wednesday, 10:00 - 11:30
+        - Wednesday, 11:45 - 13:15
 projects:
     - name: Development of the interdisciplinary master program on Computational Linguistics at Central Asian universities
       description: Erasmus+ CBHE action no. 585845-EPP-1-2017-1-ES-EPPKA2-CBHE-JP.
