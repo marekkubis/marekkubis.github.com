@@ -13,7 +13,9 @@
         {% endfor %}
 	</div>
 
+    {% if subject.more %}
     <div class="contentactions"><a href="{{subject.more}}">Szczegóły</a></div>
+    {% endif %}
 </div>
 {% endfor %}
 
