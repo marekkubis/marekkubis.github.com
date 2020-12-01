@@ -6,7 +6,7 @@ import yaml
 from jinja2 import Environment, FileSystemLoader
 from pybtex.database.input import bibtex
 
-key_pattern = re.compile('([A-Z])[a-z]*([0-9]+.*)')
+key_pattern = re.compile('([a-z])[a-z]*([0-9]+.*)')
 entry_start_pattern = re.compile('@[A-Za-z]+{(.*),')
 
 
