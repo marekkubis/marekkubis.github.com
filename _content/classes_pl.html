@@ -3,15 +3,15 @@
 
 {% for subject in data.classes %}
 <div class="contentitem">
-	<div class="contenttitle">
-        {{subject.name|pl}}
-	</div>
+    <div class="contenttitle">
+    {{subject.name|pl}}
+    </div>
 
-	<div class="contentbody">
-        {% for hour in subject.hours %}
-            <p> {{hour|pl}} </p>
-        {% endfor %}
-	</div>
+    <div class="contentbody">
+    {% for hour in subject.hours %}
+        <p> {{hour|pl}} </p>
+    {% endfor %}
+    </div>
 
     {% if subject.more %}
     <div class="contentactions"><a href="{{subject.more}}">Szczegóły</a></div>

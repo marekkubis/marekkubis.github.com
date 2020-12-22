@@ -1,26 +1,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<title>Marek Kubis - Strona domowa</title>
-		<link href="style.css" rel="stylesheet" type="text/css" />
-	</head>
-	<body>
-	<div id="wrapper">
-		<div id="menu">
-			<div class="cattop">
-				<div id="name">dr Marek Kubis</div>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Marek Kubis - Strona domowa</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+    <div id="wrapper">
+        <div id="menu">
+            <div class="cattop">
+                <div id="name">dr Marek Kubis</div>
 
-				<div id="title">Strona domowa (<a href="{{ name|replace('_pl.html', '.html') }}">English</a>)</div>
-			</div>
+                <div id="title">Strona domowa (<a href="{{ name|replace('_pl.html', '.html') }}">English</a>)</div>
+            </div>
 
-			<div class="category">
-				<div class="cathead">Kontakt</div>
-				<div class="catbody">
-					<table>
+            <div class="category">
+                <div class="cathead">Kontakt</div>
+                <div class="catbody">
+                    <table>
                                             <tr><td>e-mail:</td><td class="tvalue"><a href="mailto:mkubis@amu.edu.pl">mkubis@amu.edu.pl</a></td></tr>
 
-					    <tr><td>pokój:</td><td class="tvalue">B3-19</td></tr>
+                        <tr><td>pokój:</td><td class="tvalue">B3-19</td></tr>
                         {% for hour in data.hours %}
                         <tr><td>
                                 {% if loop.first %}
@@ -29,40 +29,40 @@
                             </td>
                             <td class="tvalue">{{hour|pl}}</td></tr>
                         {% endfor %}
-					</table>
-				</div>
-			</div>
+                    </table>
+                </div>
+            </div>
 
-			<div class="category">
-				<div class="cathead">Kategorie</div>
-				<div class="catbody">
-					<ul>
-						<li><a href="index_pl.html">Publikacje</a></li>
-						<li><a href="projects_pl.html">Projekty</a></li>
-						<li><a href="classes_pl.html">Dydaktyka</a></li>
-					</ul>
-				</div>
-			</div>
+            <div class="category">
+                <div class="cathead">Kategorie</div>
+                <div class="catbody">
+                    <ul>
+                        <li><a href="index_pl.html">Publikacje</a></li>
+                        <li><a href="projects_pl.html">Projekty</a></li>
+                        <li><a href="classes_pl.html">Dydaktyka</a></li>
+                    </ul>
+                </div>
+            </div>
 
-			<div class="category">
-				<div class="cathead">Linki</div>
-				<div class="catbody">
-					<ul>
-						<li><a href="https://ai.wmi.amu.edu.pl/groups/da/">Grupa Badawcza Analizy Dyskursu</a></li>
-						<li><a href="http://ai.wmi.amu.edu.pl/">Zakład Sztucznej Inteligencji</a></li>
-						<li><a href="http://www.wmi.amu.edu.pl/">Wydział Matematyki i Informatyki</a></li>
-						<li><a href="http://www.amu.edu.pl/">Uniwersytet im. A. Mickiewicza</a></li>
-						<li><a href="http://ltc.amu.edu.pl/">Language & Technology Conference</a></li>
-					</ul>
-				</div>
-			</div>
+            <div class="category">
+                <div class="cathead">Linki</div>
+                <div class="catbody">
+                    <ul>
+                        <li><a href="https://ai.wmi.amu.edu.pl/groups/da/">Grupa Badawcza Analizy Dyskursu</a></li>
+                        <li><a href="http://ai.wmi.amu.edu.pl/">Zakład Sztucznej Inteligencji</a></li>
+                        <li><a href="http://www.wmi.amu.edu.pl/">Wydział Matematyki i Informatyki</a></li>
+                        <li><a href="http://www.amu.edu.pl/">Uniwersytet im. A. Mickiewicza</a></li>
+                        <li><a href="http://ltc.amu.edu.pl/">Language & Technology Conference</a></li>
+                    </ul>
+                </div>
+            </div>
 
-		</div>
+        </div>
 
-		<div id=content>
-		        {% block content %} {% endblock %}
-		</div>
-	</div>
+        <div id=content>
+                {% block content %} {% endblock %}
+        </div>
+    </div>
 
-	</body>
+    </body>
 </html>

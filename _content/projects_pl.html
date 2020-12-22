@@ -4,21 +4,21 @@
 {% for project in data.projects %}
 
 <div class="contentitem">
-	<div class="contenttitle">
-	{{project.namepl}}
-	</div>
+    <div class="contenttitle">
+    {{project.namepl}}
+    </div>
 
-	<div class="contentsubtitle">{{project.role|pl}}, {{project.year}}</div>
+    <div class="contentsubtitle">{{project.role|pl}}, {{project.year}}</div>
 
-	<div class="contentbody">
-		<p>
-		{{project.descriptionpl}}
-		</p>
-	</div>
+    <div class="contentbody">
+        <p>
+        {{project.descriptionpl}}
+        </p>
+    </div>
 
-	{% if project.more is defined %}
-	<div class="contentactions"><a href="{{project.more}}">More</a></div>
-	{% endif %}
+    {% if project.more is defined %}
+    <div class="contentactions"><a href="{{project.more}}">More</a></div>
+    {% endif %}
 </div>
 {% endfor %}
 

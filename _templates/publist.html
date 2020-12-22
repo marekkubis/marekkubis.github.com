@@ -1,14 +1,14 @@
 {% for publication in publications %}
 <div class="contentitem">
-	<div class="contenttitle">{{ publication.fields.title.strip('{}') }}</div>
+    <div class="contenttitle">{{ publication.fields.title.strip('{}') }}</div>
 
-	<div class="contentsubtitle">{{ publication.persons.author|nameformat }}</div>
+    <div class="contentsubtitle">{{ publication.persons.author|nameformat }}</div>
 
-	<div class="contentbody">
-		<p>
-			{% if publication.fields.journal %}
-				<i>{{ publication.fields.journal }}</i>
-			{% endif %}
+    <div class="contentbody">
+        <p>
+            {% if publication.fields.journal %}
+                <i>{{ publication.fields.journal }}</i>
+            {% endif %}
                         {% if publication.fields.booktitle is defined %}
                                 [in:]
                                 {% if publication.persons.editor is defined %}
@@ -26,11 +26,11 @@
                         {% endif %}
                         {% if publication.fields.volume is defined %}
                                 vol.
-                        	{% if publication.fields.number is defined %}
-                                	{{ publication.fields.volume }}({{ publication.fields.number }}),
-                        	{% else %}
-					{{ publication.fields.volume }},
-                        	{% endif %}
+                            {% if publication.fields.number is defined %}
+                                    {{ publication.fields.volume }}({{ publication.fields.number }}),
+                            {% else %}
+                    {{ publication.fields.volume }},
+                            {% endif %}
                         {% endif %}
                         {% if publication.fields.pages is defined %}
                                 pp. {{ publication.fields.pages.replace('--', '-') }},
@@ -42,7 +42,7 @@
                                 {{ publication.fields.address }},
                         {% endif %}
                         {% if publication.fields.year is defined %}
-                                {{ publication.fields.year }}
+                                {{ publication.fields.year }}.
                         {% endif %}
                         {% if publication.fields.isbn is defined %}
                                 ISBN {{ publication.fields.isbn }}
@@ -53,16 +53,21 @@
                         {% if publication.fields.note is defined %}
                                 ({{ publication.fields.note }})
                         {% endif %}
-		</p>
-	</div>
+        </p>
+    </div>
 
-	<div class="contentactions">
-	<a href="{{publication.key|key2bibfile}}">bibtex</a>
+    <div class="contentactions">
+    <a href="{{publication.key|key2bibfile}}">bibtex</a>
         {% if publication.fields.url is defined %}
                 |
 
-                <a href="{{ publication.fields.url }}">more</a>
-	{% endif %}
-	</div>
+                <a href="{{ publication.fields.url }}">pdf</a>
+        {% endif %}
+        {% if publication.fields.howpublished is defined %}
+                |
+
+                <a href="{{ publication.fields.howpublished }}">more</a>
+        {% endif %}
+    </div>
 </div>
 {% endfor %}

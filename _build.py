@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
 import os
 import re
 import yaml
@@ -6,13 +6,11 @@ import yaml
 from jinja2 import Environment, FileSystemLoader
 from pybtex.database.input import bibtex
 
-key_pattern = re.compile('([a-z])[a-z]*([0-9]+.*)')
 entry_start_pattern = re.compile('@[A-Za-z]+{(.*),')
 
 
 def key2bibfile(key):
-    matcher = key_pattern.match(key)
-    return matcher.group(1).lower() + matcher.group(2) + '.bib'
+    return f'{key}.bib'
 
 
 def nameformat(persons):
@@ -34,7 +32,7 @@ with open('publications.bib') as pubfile:
             curr_file = open(bibfilename, 'w')
 
         if not line.lstrip().startswith('note'):
-            curr_file.write(line)
+            curr_file.write(line)  # type: ignore
 
 if curr_file is not None:
     curr_file.close()
